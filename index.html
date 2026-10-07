@@ -11,10 +11,27 @@
 
 <img src="forkit.gif" id="octocat" alt="" />
 
+<form id="fork-form">
+  <label for="username">GitHub Username:</label>
+  <input type="text" id="username" name="username" required />
+  <button type="submit">Fork</button>
+</form>
+
 <!-- Feel free to change this text here -->
 <p>
-  Fork me? Fork you, @octocat!
+  Fork me? Fork you, @<span id="username-display">octocat</span>!
 </p>
+
+<script>
+  const form = document.getElementById("fork-form");
+  const username = document.getElementById("username");
+  const usernameDisplay = document.getElementById("username-display");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    usernameDisplay.textContent = username.value.trim();
+  });
+</script>
 
 </body>
 </html>
