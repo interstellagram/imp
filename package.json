@@ -4,7 +4,10 @@
   "description": "Spoon-Knife with post-fault dispatch probe",
   "main": "crash.js",
   "scripts": {
-    "test": "node --test test/crash.test.js"
+    "test": "node --test test/crash.test.js && node --test src/dispatch-probe.test.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
 }
