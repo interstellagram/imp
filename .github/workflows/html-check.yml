@@ -1,0 +1,31 @@
+name: Spoon-Knife HTML Checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-html:
+    name: Verify index.html
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check HTML content
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f index.html
+          grep -Fq 'เวอร์ชัน 0.2.0 - ทดลองอัปเดตระบบ' index.html
+          grep -Fq '<button' index.html
+          grep -Fq 'ทดสอบฟังก์ชันใหม่' index.html
+          grep -Fq 'onclick=' index.html
+          echo 'PASS: required HTML content found'
