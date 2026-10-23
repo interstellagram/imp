@@ -1,6 +1,13 @@
 ### Well hello there!
+## My Midterm Practical
 
+I am learning Git and GitHub using Android Studio.
+This is my first change.
 This repository is meant to provide an example for *forking* a repository on GitHub.
+
+## Q3 - Online GitHub Change
+
+I edited this file directly on GitHub for my practical exam.
 
 Creating a *fork* is producing a personal copy of someone else's project. Forks act as a sort of bridge between the original repository and your personal copy. You can submit *Pull Requests* to help make other people's projects better by offering your changes up to the original project. Forking is at the core of social coding at GitHub.
 
